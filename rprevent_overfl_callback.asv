@@ -1,0 +1,8 @@
+function rprevent_overfl_callback(src, ~)
+    if(src.NumBytesAvailable>0)
+        butes_cnt = count + src.NumBytesAvailable;
+        r = read(src,src.NumBytesAvailable);
+        % display(r);
+    end
+end 
+    

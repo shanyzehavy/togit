@@ -1,0 +1,9 @@
+clear serial_callback_bl;
+%% Open bianry file and rad it:
+fid = fopen('top_A3P250.dat');
+data = fread(fid);
+fclose(fid);
+
+device = bluetooth("H-C-2010-06-01",1);
+configureCallback(device,"terminator",@serial_callback_bl);
+configureTerminator(device,"CR/LF")
